@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+
+/* =========================
+   1. Global styles
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: "Red Hat Display", sans-serif;
+    background-color: #e0e8ff;
+
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% auto;
+}
+
+/* =========================
+   2. Main page wrapper
+========================= */
+
+.main {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 24px;
+    padding: 32px 20px;
+}
+
+/* =========================
+   3. Main card
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 450px;
+
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 20px 40px rgba(56, 41, 224, 0.12);
+}
+
+/* =========================
+   4. Hero image
+========================= */
+
+.hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* =========================
+   5. Card content
+========================= */
+
+.content {
+    padding: 32px 48px 36px;
+}
+
+.heading {
+    margin: 0;
+
+    color: #1f2f56;
+    font-size: 28px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.summary-para {
+    margin: 16px 0 24px;
+
+    color: #7280a7;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* =========================
+   6. Plan details
+========================= */
+
+.plan {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 20px;
+    margin-bottom: 30px;
+
+    background-color: #f7f9ff;
+    border-radius: 12px;
+}
+
+.plan-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+}
+
+.plan-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    flex: 1;
+}
+
+
+.plan-text h3 {
+    margin: 0;
+    color: #1f2f56;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.plan-text p {
+    margin: 0;
+    color: #7280a7;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+
+.change-link a {
+    color: #3829e0;
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: color 0.2s ease;
+}
+
+.change-link a:hover {
+    color: #766cf1;
+    text-decoration: none;
+}
+
+.change-link a:focus-visible {
+    outline: 2px solid #3829e0;
+    outline-offset: 4px;
+}
+
+/* =========================
+   7. Payment button
+========================= */
+
+.proceed-btn {
+    display: block;
+    width: 100%;
+
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+
+    background-color: #3829e0;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 12px 20px rgba(56, 41, 224, 0.2);
+
+    transition: background-color 0.2s ease;
+}
+
+.proceed-btn:hover {
+    background-color: #766cf1;
+}
+
+.proceed-btn:focus-visible {
+    outline: 3px solid #1f2f56;
+    outline-offset: 3px;
+}
+
+/* =========================
+   8. Cancel order
+========================= */
+
+.cancel-order {
+    display: block;
+    margin-top: 28px;
+
+    color: #7280a7;
+    font-size: 15px;
+    font-weight: 700;
+
+    text-align: center;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.cancel-order:hover {
+    color: #1f2f56;
+}
+
+.cancel-order:focus-visible {
+    outline: 2px solid #3829e0;
+    outline-offset: 4px;
+}
+
+/* =========================
+   9. Footer
+========================= */
+
+.attribution {
+    color: #7280a7;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: #3829e0;
+}
+
+/* =========================
+   10. Responsive design
+========================= */
+
+@media (max-width: 450px) {
+
+    body {
+        background-image: url("./images/pattern-background-mobile.svg");
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 100% auto;
+    }
+
+    .main {
+        padding: 24px;
+        gap: 20px;
+    }
+
+    .container {
+        max-width: 100%;
+        border-radius: 18px;
+    }
+
+    .content {
+        padding: 28px 24px 32px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    .summary-para {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .plan {
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .plan-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .plan-text strong {
+        font-size: 14px;
+    }
+    
+    .plan-text span,
+    .change-link a {
+        font-size: 13px;
+    }
+}
+
